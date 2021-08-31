@@ -1,0 +1,135 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --primary-blue: hsl(212, 86%, 64%);
+    --secondary-dark-blue: hsl(234, 12%, 34%);
+    --secondary-greyich-blue: hsl(229, 6%, 66%);
+    --secondary-light-grey: hsl(0, 0%, 98%);
+
+    --weight-low: 200;
+    --weight-medium: 400;
+    --weight-high: 600;
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-light-grey);
+}
+
+.bold, .card h4{
+    font-weight: var(--weight-high);
+}
+
+.medium, .card p{
+    font-weight: var(--weight-medium);
+}
+
+.light{
+    font-weight: var(--weight-low);
+}
+
+.black, .card h4{
+    color: var(--secondary-dark-blue);
+}
+
+.grey, .card p{
+    color: var(--secondary-greyich-blue);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+header > * {
+    max-width: 55ch;
+    text-align: center;
+}
+
+header > h2{
+    font-size: 2.25rem;
+}
+
+header > p{
+    margin-top: 1.2em;
+}
+
+.red{
+    border-top: 0.35em solid var(--primary-red);
+}
+
+.cyan{
+    border-top: 0.35em solid var(--primary-cyan);
+}
+
+.blue{
+    border-top: 0.35em solid var(--primary-blue);
+}
+
+.yellow{
+    border-top: 0.35em solid var(--primary-orange);
+}
+
+.card-grid{
+    margin: 4rem 15% 4rem 15%;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    min-height: fit-content;
+}
+
+.card:nth-of-type(1){
+    grid-row: 1/3;
+    align-self: center;
+}
+
+.card:nth-of-type(2), .card:nth-of-type(3){
+    grid-column: 2;
+}
+
+.card:nth-of-type(4){
+    grid-row: 1/3;
+    align-self: center;
+    grid-column: 3;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 2em;
+    box-shadow: 0 1rem 0.5rem rgba(19, 182, 223, 0.05);
+    border-radius: 3%;
+    min-height: 30vh;
+}
+
+.card img{
+    max-width: 20%;
+    min-width: 2em;
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.card p{
+    max-width: 90%;
+}
+
+.card h4{
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+
+
+
